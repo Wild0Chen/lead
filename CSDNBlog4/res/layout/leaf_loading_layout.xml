@@ -12,7 +12,7 @@
         android:layout_marginTop="100dp"
         android:text="loading ..."
         android:textColor="#FFA800"
-        android:textSize=" 30dp" />
+        android:textSize="30dp" />
 
     <RelativeLayout
         android:id="@+id/leaf_content"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="35dp"
+            android:layout_marginRight="15dp"
             android:src="@drawable/fengshan" />
     </RelativeLayout>
 

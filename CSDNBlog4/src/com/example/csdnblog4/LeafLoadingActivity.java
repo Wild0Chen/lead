@@ -31,12 +31,20 @@ public class LeafLoadingActivity extends Activity implements OnSeekBarChangeList
                                 new Random().nextInt(800));
                         mLeafLoadingView.setProgress(mProgress);
                     } else {
+	                    if (mProgress==100) {
+		                    mProgress = 0;
+		                    mProgress += 1;
+		                    // 随机800ms以内刷新一次
+		                    mHandler.sendEmptyMessageDelayed(REFRESH_PROGRESS,
+				                    new Random().nextInt(800));
+		                    mLeafLoadingView.setProgress(mProgress);
+		                    break;
+	                    }
                         mProgress += 1;
                         // 随机1200ms以内刷新一次
                         mHandler.sendEmptyMessageDelayed(REFRESH_PROGRESS,
                                 new Random().nextInt(1200));
                         mLeafLoadingView.setProgress(mProgress);
-
                     }
                     break;
 
@@ -69,7 +77,7 @@ public class LeafLoadingActivity extends Activity implements OnSeekBarChangeList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.leaf_loading_layout);
         initViews();
-        mHandler.sendEmptyMessageDelayed(REFRESH_PROGRESS, 3000);
+        mHandler.sendEmptyMessageDelayed(REFRESH_PROGRESS, 1000);
     }
 
     private void initViews() {

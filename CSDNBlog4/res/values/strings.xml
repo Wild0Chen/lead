@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">CSDNBlog4</string>
+    <string name="app_name">Lead</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="current_mplitude">修改中等振幅，当前%1$s</string>
